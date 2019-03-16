@@ -1,0 +1,20 @@
+<html>
+<script src='http://d3js.org/d3.v5.min.js'></script>
+<head>
+  <title>test event</title>
+</head>
+<body>
+  <button>test</button>
+  <h2></h2>
+</body>
+<html>
+
+
+<script>
+    d3.select('button')
+      .on('click', function(){
+        d3.select('body')
+          .append('h2')
+          .text('HAI');
+      });
+</script>

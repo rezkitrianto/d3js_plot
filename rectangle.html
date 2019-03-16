@@ -1,0 +1,22 @@
+<html>
+<script src='https://d3js.org/d3.v4.min.js'></script>
+<body>
+  <svg width='200' height='500'></svg>
+</body>
+</html>
+
+<script>
+    var data = [100, 200, 150, 50, 120];
+    var barHeight = 20;
+    var bar = d3.select('svg')
+              .selectAll('rect')
+              .data(data)
+              .enter()
+              .append('rect')
+              .attr('width', function(d) {return d;})
+              .attr('height', barHeight - 1)
+              .attr('transform', function(d,i){
+                return "translate(10,"+i*barHeight+")"
+              })
+
+</script>

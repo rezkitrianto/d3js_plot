@@ -1,0 +1,32 @@
+<html>
+<script src='https://d3js.org/d3.v4.min.js'></script>
+<body>
+
+  <h3>Today is a beautiful day!!</h3>
+  <h4>Test another text</h4>
+  <ul>
+      <!-- <li>
+        test
+      <li> -->
+  </ul>
+
+  <svg width='200' height='500'></svg>
+</body>
+</html>
+
+<script>
+    d3.select('h3').style('color', 'red');
+    d3.select('h3').style('font-size', '24px');
+
+    d3.select('h4').style('color', 'green');
+
+    var things = ['pencil', 'ruler', 'bottle']
+    d3.select('ul')
+      .selectAll('li')
+      .data(things)
+      .enter()
+      .append('li')
+      .text(function(d) {return d;})
+
+
+</script>
